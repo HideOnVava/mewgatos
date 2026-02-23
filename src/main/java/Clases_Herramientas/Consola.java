@@ -1,6 +1,8 @@
 package Clases_Herramientas;
 
-public class Consola {
+import java.util.Scanner;
+
+public class Consola{
 
     public static void limpiar(){
         for(int i = 0; i < 15; i++){
@@ -8,4 +10,9 @@ public class Consola {
         }
     }
 
+    public static void esperar(){
+        Scanner MyScanner = new Scanner(System.in);
+        System.out.print("Presiona [enter] para continuar...");
+        MyScanner.nextLine();
+    }
 }

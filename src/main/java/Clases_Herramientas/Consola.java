@@ -15,4 +15,9 @@ public class Consola{
         System.out.print("Presiona [enter] para continuar...");
         MyScanner.nextLine();
     }
+
+    public static void esperar2(){
+        Scanner MyScanner = new Scanner(System.in);
+        MyScanner.nextLine();
+    }
 }

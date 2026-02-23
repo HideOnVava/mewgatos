@@ -57,21 +57,30 @@ public class CampoEntrenamiento{
         boolean turno = true;
         // ! Simulamos una pelea mientras ambos esten vivos.
         while(heroe.isAlive() && villano.isAlive()){
-            if(turno){ // ! Turno del heroe
-                heroe.ataca();
-                System.out.println(heroe.apodo() + " ataca a " + villano.apodo() + "!");
-                System.out.println("Vida actual del villano: " + villano.hp_actual());
-                System.out.println("|------------------------------|");
-            }else{ // ! Turno del villano
-                villano.ataca();
-                System.out.println(villano.apodo() + " ataca a " + heroe.apodo() + "!");
-                System.out.println("Vida actual del heroe: " + heroe.hp_actual());
-                System.out.println("|------------------------------|");
-            }
+            turnoActual(turno);
             turno = (!turno);
         }
         // ! Mostramos al vencedor!
+    }
+
+    private void turnoActual(boolean turno){
+        if(turno){ // ! Turno del heroe.
+            System.out.println("Turno del Heroe " + heroe.apodo() + "!");
+            int daño = heroe.ataca();
+            System.out.println("El heroe ha realizado un ataque con " + daño + " de daño!");
+            villano.recibirDaño(daño);
+            System.out.println("El villano ha recibido el ataque!");
+            System.out.println("Vida actual del villano: " + villano.hp_actual() + "/" + villano.hp_maximo());
+        }else{ // ! Turno del villano!
+            System.out.println("Turno del Villano " + villano.apodo() + "!");
+            int daño = villano.ataca();
+            System.out.println("El villano ha realizado un ataque con " + daño + " de daño!");
+            heroe.recibirDaño(daño);
+            System.out.println("El heroe ha recibido el ataque!");
+            System.out.println("Vida actual del heroe: " + heroe.hp_actual() + "/" + heroe.hp_maximo());
+        }
         Consola.esperar();
+        System.out.println("|------------------------------|");
     }
 
     private void newGanador(){

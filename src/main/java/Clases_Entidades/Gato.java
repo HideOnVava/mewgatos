@@ -41,6 +41,7 @@ public class Gato{
     public int hp_actual(){return hp_actual;}
     public int suerte(){return suerte;}
     public int defensa(){return defensa;}
+    public int ataque(){return ataca();}
 
     public void setGatoEnemigo(Gato gato) { gato_enemigo = gato; }
     public void restaurar(){hp_actual = hp_maximo;}
@@ -49,7 +50,7 @@ public class Gato{
         return hp_actual > 0;
     }
 
-    public void ataca(){
+    public int ataca(){
         int daño_base = (fuerza);
         int daño_critico = 0;
         int chance = rnd.nextInt(1,10);
@@ -58,12 +59,14 @@ public class Gato{
             daño_critico = (daño_base);
         }
         int daño_total = (daño_base + daño_critico);
-        gato_enemigo.recibirDaño(daño_total);
+        return daño_total;
+        // !!! gato_enemigo.recibirDaño(daño_total);
     }
 
     public void recibirDaño(int daño){
-        Math.max(1,(daño - defensa));
+        daño = Math.max(1,(daño - defensa));
         hp_actual = (hp_actual - daño);
+        hp_actual = Math.max(hp_actual,0);
     }
 
     private void newGatoR(){
@@ -83,7 +86,7 @@ public class Gato{
         System.out.println("|------------------------------|");
         System.out.print  ("|Ingresa su nombre: ");
         nombre = MyScanner.nextLine();
-        System.out.print("||Ingresa su apodo: ");
+        System.out.print("|Ingresa su apodo: ");
         apodo = MyScanner.next();
     }
 

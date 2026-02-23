@@ -44,6 +44,7 @@ public class CampoEntrenamiento{
         System.out.print("|Ingresa el (id) del villano: ");
         villano = arreglo.get(MyScanner.nextInt());
         System.out.println("|------------------------------|");
+        System.out.println("Has seleccionado a los contrincantes!");
         Consola.esperar();
     }
 
@@ -65,14 +66,14 @@ public class CampoEntrenamiento{
 
     private void turnoActual(boolean turno){
         if(turno){ // ! Turno del heroe.
-            System.out.println("Turno del Heroe " + heroe.apodo() + "!");
+            System.out.println("          Turno del Heroe " + heroe.apodo() + "!");
             int daño = heroe.ataca();
             System.out.println("El heroe ha realizado un ataque con " + daño + " de daño!");
             villano.recibirDaño(daño);
             System.out.println("El villano ha recibido el ataque!");
             System.out.println("Vida actual del villano: " + villano.hp_actual() + "/" + villano.hp_maximo());
         }else{ // ! Turno del villano!
-            System.out.println("Turno del Villano " + villano.apodo() + "!");
+            System.out.println("          Turno del Villano " + villano.apodo() + "!");
             int daño = villano.ataca();
             System.out.println("El villano ha realizado un ataque con " + daño + " de daño!");
             heroe.recibirDaño(daño);
@@ -96,7 +97,7 @@ public class CampoEntrenamiento{
         System.out.println("|------------------------------|");
         System.out.println("|           Ganador!           |");
         System.out.println("|------------------------------|");
-        System.out.println("[Increible!] El vencedor ha sido: " + ganador.apodo());
+        System.out.println("[Increible!] El gato " + ganador.apodo() + " ha vencido!!!");
         System.out.println("|------------------------------|");
         Consola.esperar();
     }

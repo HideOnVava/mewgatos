@@ -55,8 +55,8 @@ public class Main{
             return;
         }
         for(Gato gato : arreglo_gatos){
-            System.out.println("|Apodo: " + gato.apodo());
-            System.out.println("|------------------------------|");
+            System.out.println("|Gato " + gato.nombre() + " [" + gato.apodo()+"]");
+            System.out.println("|Atributos:");
             System.out.println("|Fuerza: " + (gato.fuerza()));
             System.out.println("|HP: " + (gato.hp_maximo()));
             System.out.println("|Suerte: " + (gato.suerte()));

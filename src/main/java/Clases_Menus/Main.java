@@ -46,6 +46,7 @@ public class Main{
 
     public static void mostrarGatos(){
         Consola.limpiar();
+        Scanner MyScanner = new Scanner(System.in);
         System.out.println("|------------------------------|");
         System.out.println("|            Gatos!            |");
         System.out.println("|------------------------------|");
@@ -54,16 +55,36 @@ public class Main{
             Consola.esperar();
             return;
         }
-        for(Gato gato : arreglo_gatos){
-            System.out.println("|Gato " + gato.nombre() + " [" + gato.apodo()+"]");
-            System.out.println("|Atributos:");
+        char opcion = 'A';
+        int posicion = 0;
+        while(opcion != 'X'){
+            Gato gato = arreglo_gatos.get(posicion);
+            Consola.limpiar();
+            System.out.println("|------------------------------|");
+            System.out.println("|            Gatos!            |");
+            System.out.println("|------------------------------|");
+            System.out.println("|Gato " + gato.nombre() + " [" + gato.apodo() + "]");
+            System.out.println("|           Atributos          |");
             System.out.println("|Fuerza: " + (gato.fuerza()));
             System.out.println("|HP: " + (gato.hp_maximo()));
             System.out.println("|Suerte: " + (gato.suerte()));
             System.out.println("|Defensa: " + (gato.defensa()));
             System.out.println("|------------------------------|");
+            System.out.print("'A' : Anterior | 'D' : Siguiente | 'X' Salir: ");
+            opcion = MyScanner.nextLine().charAt(0);
+            switch(opcion){
+                case 'A' -> {
+                    if((posicion - 1 >= 0) && (arreglo_gatos.get(posicion - 1) != null)){
+                        posicion--;
+                    }
+                }
+                case 'D' -> {
+                    if((posicion + 1 < arreglo_gatos.size()) && (arreglo_gatos.get(posicion + 1) != null)){
+                        posicion++;
+                    }
+                }
+            }
         }
-        Consola.esperar();
     }
 
 }

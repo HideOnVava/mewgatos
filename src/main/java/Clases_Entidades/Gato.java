@@ -10,19 +10,19 @@ public class Gato{
     Random rnd = new Random();
     Scanner MyScanner = new Scanner(System.in);
     Gato gato_enemigo; // ! El gato enemigo en el combate
-    // --------------- Estadisticas del Gato ---------------
+    // ------------------------------ Estadisticas del Gato ------------------------------
     private int fuerza; // ! Fuerza (Para calcular el daño del ataque)
     private int hp_maximo; // ! Vida maxima (total) del gato
     private int hp_actual; // ! Vida actual del gato
     private int suerte; // ! Afecta al golpe critico. (1-5)
     private int defensa; // ! Tanquea puntos de daño.
 
-    // --------------- Atributos del Gato ---------------
+    // ------------------------------ Atributos del Gato ------------------------------
     private String nombre; // El nombre del gato
     private String apodo; // Un apodo "amigable" del gato
     private String rol;
 
-    //--------------- Historial del Gato ---------------
+    //------------------------------ Historial del Gato ------------------------------
     private int combates; // Numero de combates total
     //Constructores:
     public Gato(boolean random){
@@ -81,11 +81,11 @@ public class Gato{
 
     private void newGatoR(){
         //Metodo para obtener (random) las estadisticas del Gato
-        fuerza = rnd.nextInt(5,11);
-        hp_maximo = rnd.nextInt(20,50);
+        fuerza = rnd.nextInt(6,11);
+        hp_maximo = rnd.nextInt(20,35);
         hp_actual = hp_maximo;
-        suerte = rnd.nextInt(1,5);
-        defensa = rnd.nextInt(1,5);
+        suerte = rnd.nextInt(2,5);
+        defensa = rnd.nextInt(1,3);
     }
 
     private void newAtributos(){

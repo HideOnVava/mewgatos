@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db3796c2-53fe-4fd8-8ea8-7c6d39befbf2" name="Changes" comment="0.1c mewgatos - Cambio en el sistema de combates y Atributos en el Gato">
+    <list default="true" id="db3796c2-53fe-4fd8-8ea8-7c6d39befbf2" name="Changes" comment="0.1d mewgatos - Cambio en el sistema de combates y Atributos en el Gato">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Entidades/Gato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Entidades/Gato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/CampoEntrenamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/CampoEntrenamiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +130,10 @@
       <workItem from="1771870281867" duration="1740000" />
       <workItem from="1771880852569" duration="2722000" />
       <workItem from="1771895131365" duration="2736000" />
+      <workItem from="1771904620060" duration="1059000" />
+      <workItem from="1771910859363" duration="595000" />
+      <workItem from="1771949017465" duration="3203000" />
+      <workItem from="1771964967680" duration="517000" />
     </task>
     <task id="LOCAL-00001" summary="0.0 mewgatos - init commit">
       <option name="closed" value="true" />
@@ -179,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771883210037</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="0.1d mewgatos - Cambio en el sistema de combates y Atributos en el Gato">
+      <option name="closed" value="true" />
+      <created>1771904706425</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1771904706425</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +217,8 @@
     <MESSAGE value="0.1b mewgatos - Nuevos cambios esteticos." />
     <MESSAGE value="0.1c mewgatos - Aun mas cambios esteticos." />
     <MESSAGE value="0.1c mewgatos - Cambio en el sistema de combates y Atributos en el Gato" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.1c mewgatos - Cambio en el sistema de combates y Atributos en el Gato" />
+    <MESSAGE value="0.1d mewgatos - Cambio en el sistema de combates y Atributos en el Gato" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.1d mewgatos - Cambio en el sistema de combates y Atributos en el Gato" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

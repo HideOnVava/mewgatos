@@ -64,7 +64,7 @@ public class Main{
             System.out.println("|            Gatos!            |");
             System.out.println("|------------------------------|");
             System.out.println("|Gato " + gato.nombre() + " [" + gato.apodo() + "]");
-            System.out.println("|           Atributos          |");
+            System.out.println("|-----------Atributos----------|");
             System.out.println("|Fuerza: " + (gato.fuerza()));
             System.out.println("|HP: " + (gato.hp_maximo()));
             System.out.println("|Suerte: " + (gato.suerte()));
@@ -74,12 +74,16 @@ public class Main{
             opcion = MyScanner.nextLine().charAt(0);
             switch(opcion){
                 case 'A' -> {
-                    if((posicion - 1 >= 0) && (arreglo_gatos.get(posicion - 1) != null)){
+                    if(posicion - 1 == -1){
+                        posicion = arreglo_gatos.size() - 1;
+                    }else{
                         posicion--;
                     }
                 }
                 case 'D' -> {
-                    if((posicion + 1 < arreglo_gatos.size()) && (arreglo_gatos.get(posicion + 1) != null)){
+                    if(posicion + 1 == arreglo_gatos.size()){
+                        posicion = 0;
+                    }else{
                         posicion++;
                     }
                 }

@@ -50,38 +50,48 @@ public class CampoEntrenamiento{
 
     private void newBatallaR(){
         Consola.limpiar();
+        heroe.setRol("heroe");
+        villano.setRol("villano");
         heroe.setGatoEnemigo(villano);
         villano.setGatoEnemigo(heroe);
         System.out.println("|------------------------------|");
         System.out.println("|             Pelea!           |");
         System.out.println("|------------------------------|");
-        boolean turno = true;
+        boolean orden_turno = true;
+        int numero_ronda = 1;
+        int contador = 1;
         // ! Simulamos una pelea mientras ambos esten vivos.
         while(heroe.isAlive() && villano.isAlive()){
-            turnoActual(turno);
-            turno = (!turno);
+            // ! turnoActual(orden_turno,numero_ronda);
+            combate(orden_turno,numero_ronda);
+            orden_turno = (!orden_turno);
+            if(contador % 2 == 0){
+                numero_ronda++;
+            }
+            contador++;
         }
         // ! Mostramos al vencedor!
     }
 
-    private void turnoActual(boolean turno){
-        if(turno){ // ! Turno del heroe.
-            System.out.println("          Turno del Heroe " + heroe.apodo() + "!");
-            int daño = heroe.ataca();
-            System.out.println("El heroe ha realizado un ataque con " + daño + " de daño!");
-            villano.recibirDaño(daño);
-            System.out.println("El villano ha recibido el ataque!");
-            System.out.println("Vida actual del villano: " + villano.hp_actual() + "/" + villano.hp_maximo());
-        }else{ // ! Turno del villano!
-            System.out.println("          Turno del Villano " + villano.apodo() + "!");
-            int daño = villano.ataca();
-            System.out.println("El villano ha realizado un ataque con " + daño + " de daño!");
-            heroe.recibirDaño(daño);
-            System.out.println("El heroe ha recibido el ataque!");
-            System.out.println("Vida actual del heroe: " + heroe.hp_actual() + "/" + heroe.hp_maximo());
-        }
-        Consola.esperar();
+    private void combate(boolean orden_turno, int ronda){
+        Consola.limpiar();
+        Gato gato;
+        if(orden_turno){ gato = heroe;} else { gato = villano;}
         System.out.println("|------------------------------|");
+        System.out.println("|Ronda " + ronda + " | Turno del " + gato.rol());
+        System.out.println("|------------------------------|");
+        boolean esCritico = gato.obtenerCritico();
+        int daño = gato.ataque(esCritico);
+        if(esCritico){
+            System.out.println("|El gato " + gato.apodo() + " ha realizado un ataque critico!");
+        }else{
+            System.out.println("|El gato " + gato.apodo() + " ha realizado un ataque!");
+        }
+        System.out.println("|Ha infligido un total de: " + daño + " de daño!");
+        gato.enemigo().recibirDaño(daño);
+        System.out.println("|El gato " + gato.enemigo().apodo() + " ha terminado con una vida de " + gato.enemigo().hp_actual() + "/" + gato.enemigo().hp_maximo());
+        System.out.println("|------------------------------|");
+        Consola.esperar();
     }
 
     private void newGanador(){

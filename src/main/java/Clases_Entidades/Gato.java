@@ -20,6 +20,7 @@ public class Gato{
     // --------------- Atributos del Gato ---------------
     private String nombre; // El nombre del gato
     private String apodo; // Un apodo "amigable" del gato
+    private String rol;
 
     //--------------- Historial del Gato ---------------
     private int combates; // Numero de combates total
@@ -36,26 +37,35 @@ public class Gato{
     //Getters y setters:
     public String nombre(){return nombre;}
     public String apodo(){return apodo;}
+    public String rol(){return rol;}
     public int fuerza(){return fuerza;}
     public int hp_maximo(){return hp_maximo;}
     public int hp_actual(){return hp_actual;}
     public int suerte(){return suerte;}
     public int defensa(){return defensa;}
-    public int ataque(){return ataca();}
+    public Gato enemigo(){return gato_enemigo;}
 
     public void setGatoEnemigo(Gato gato) { gato_enemigo = gato; }
     public void restaurar(){hp_actual = hp_maximo;}
+    public void setRol(String rol){this.rol = rol;}
     //Metodos:
     public boolean isAlive(){
         return hp_actual > 0;
     }
 
-    public int ataca(){
+    public boolean obtenerCritico(){
+        int chance = rnd.nextInt(1,10);
+        if(suerte >= chance){
+            return true;
+        }
+        return false;
+    }
+
+    public int ataque(boolean critico){
         int daño_base = (fuerza);
         int daño_critico = 0;
         int chance = rnd.nextInt(1,10);
-        // Comprobamos si la suerte es >= que la chance.
-        if(suerte >= chance){
+        if(critico){
             daño_critico = (daño_base);
         }
         int daño_total = (daño_base + daño_critico);

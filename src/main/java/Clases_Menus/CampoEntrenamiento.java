@@ -6,19 +6,19 @@ import Clases_Herramientas.Consola;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CampoEntrenamiento{
+public class CampoEntrenamiento {
     //Atributos:
     Scanner MyScanner = new Scanner(System.in);
     Gato heroe;
     Gato villano;
     ArrayList<Gato> arreglo;
     //Constructores:
-    public CampoEntrenamiento(ArrayList<Gato> arreglo){
+    public CampoEntrenamiento(ArrayList<Gato> arreglo) {
         this.arreglo = arreglo;
         newIniciar();
     }
     //Metodos:
-    private void newIniciar(){
+    private void newIniciar() {
         Consola.limpiar();
         System.out.println("|------------------------------|");
         System.out.println("|       Campo Entrenamiento    |");
@@ -32,7 +32,7 @@ public class CampoEntrenamiento{
         newBatallaR();
         newGanador();
     }
-    private void newEscoger(){
+    private void newEscoger() {
         System.out.println("|Gatos!");
         for(int i = 0; i < arreglo.size(); i++){
             Gato gato = arreglo.get(i);
@@ -48,7 +48,7 @@ public class CampoEntrenamiento{
         Consola.esperar();
     }
 
-    private void newBatallaR(){
+    private void newBatallaR() {
         Consola.limpiar();
         heroe.setRol("heroe");
         villano.setRol("villano");
@@ -73,7 +73,7 @@ public class CampoEntrenamiento{
         // ! Mostramos al vencedor!
     }
 
-    private void combate(boolean orden_turno, int ronda){
+    private void combate(boolean orden_turno, int ronda) {
         Consola.limpiar();
         Gato gato;
         if(orden_turno){ gato = heroe;} else { gato = villano;}
@@ -94,7 +94,7 @@ public class CampoEntrenamiento{
         Consola.esperar();
     }
 
-    private void newGanador(){
+    private void newGanador() {
         Consola.limpiar();
         Gato ganador;
         if(heroe.isAlive()){

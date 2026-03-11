@@ -5,7 +5,7 @@ import Clases_Herramientas.Consola;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Gato{
+public class Gato {
     //Atributos:
     Random rnd = new Random();
     Scanner MyScanner = new Scanner(System.in);
@@ -25,7 +25,7 @@ public class Gato{
     //------------------------------ Historial del Gato ------------------------------
     private int combates; // Numero de combates total
     //Constructores:
-    public Gato(boolean random){
+    public Gato(boolean random) {
         newAtributos();
         if(random){
             newGatoR();
@@ -53,7 +53,7 @@ public class Gato{
         return hp_actual > 0;
     }
 
-    public boolean obtenerCritico(){
+    public boolean obtenerCritico() {
         int chance = rnd.nextInt(1,10);
         if(suerte >= chance){
             return true;
@@ -61,7 +61,7 @@ public class Gato{
         return false;
     }
 
-    public int ataque(boolean critico){
+    public int ataque(boolean critico) {
         int daño_base = (fuerza);
         int daño_critico = 0;
         int chance = rnd.nextInt(1,10);
@@ -73,13 +73,13 @@ public class Gato{
         // !!! gato_enemigo.recibirDaño(daño_total);
     }
 
-    public void recibirDaño(int daño){
+    public void recibirDaño(int daño) {
         daño = Math.max(1,(daño - defensa));
         hp_actual = (hp_actual - daño);
         hp_actual = Math.max(hp_actual,0);
     }
 
-    private void newGatoR(){
+    private void newGatoR() {
         //Metodo para obtener (random) las estadisticas del Gato
         fuerza = rnd.nextInt(6,11);
         hp_maximo = rnd.nextInt(20,35);
@@ -88,7 +88,7 @@ public class Gato{
         defensa = rnd.nextInt(1,3);
     }
 
-    private void newAtributos(){
+    private void newAtributos() {
         // Metodo para obtener los atributos basicos del Gato
         Consola.limpiar();
         System.out.println("|------------------------------|");
@@ -100,7 +100,7 @@ public class Gato{
         apodo = MyScanner.next();
     }
 
-    private void newConfirmacion(){
+    private void newConfirmacion() {
         System.out.println("|------------------------------|");
         System.out.println("|           Atributos          |");
         System.out.println("|------------------------------|");

@@ -6,12 +6,12 @@ import Clases_Herramientas.Consola;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main{
+public class Main {
     //Atributos:
     private static ArrayList<Gato> arreglo_gatos = new ArrayList<>();
     private static CampoEntrenamiento campo_entrenamiento;
     //Funciones:
-    public static void main(String[] args){
+    public static void main() {
         int opcion = 0;
         while(opcion != 9){
             opcion = opcionesLobby();
@@ -19,7 +19,7 @@ public class Main{
         }
     }
 
-    public static int opcionesLobby(){
+    public static int opcionesLobby() {
         Consola.limpiar();
         Scanner MyScanner = new Scanner(System.in);
         System.out.println("|------------------------------|");
@@ -34,7 +34,7 @@ public class Main{
         return MyScanner.nextInt();
     }
 
-    public static void lobby(int opcion){
+    public static void lobby(int opcion) {
         switch(opcion){
             case 1 -> {arreglo_gatos.add(new Gato(true));}
             case 2 -> {mostrarGatos();}
@@ -44,7 +44,7 @@ public class Main{
         }
     }
 
-    public static void mostrarGatos(){
+    public static void mostrarGatos() {
         Consola.limpiar();
         Scanner MyScanner = new Scanner(System.in);
         System.out.println("|------------------------------|");

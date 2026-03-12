@@ -18,9 +18,9 @@ public class Menu_Gatos {
     }
     //Metodos getter y setter:
     public void menuGatos_inicio() {
-        gato = arreglo_gatos.get(indice_gato); // ! Agregamos al gato actual.
         char opcion_usuario = ' ';
         while(opcion_usuario != 'X') {
+            gato = arreglo_gatos.get(indice_gato); // ! Agregamos al gato actual.
             opcion_usuario = menuGatos_opciones();
             menuGatos_switch(opcion_usuario);
         }

@@ -61,7 +61,7 @@ public class Gato {
     public Gato enemigo(){return gato_enemigo;}
 
     public void setGatoEnemigo(Gato gato) { gato_enemigo = gato; }
-    public void restaurar(){hp_actual = hp_maximo;}
+    public void restaurar(){hp_actual = calcularVidaMaxima();}
     public void setRol(String rol){this.rol = rol;}
     //Metodos:
     public boolean isAlive(){

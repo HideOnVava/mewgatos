@@ -28,18 +28,21 @@ public class Menu_Aventura {
         }
     }
 
-    public void aventura_switch(char opcion_usuario) {
+    private void aventura_switch(char opcion_usuario) {
         switch(opcion_usuario) {
             case '1' -> {
                 aventura_añadirGato();
             }
             case '2' -> {
-                if(aventura_validarGatos()){
+                if(aventura_validarGatos()) {
                     break;
                 }
                 menu_gatos.menuGatos_inicio();
             }
             case '3' -> {
+                if(aventura_validarGatos2()) {
+                    break;
+                }
                 campo_entrenamiento.campoEntrenamiento_inicio();
             }
             case 'X' -> {
@@ -51,7 +54,7 @@ public class Menu_Aventura {
         }
     }
 
-    public boolean aventura_validarGatos() {
+    private boolean aventura_validarGatos() {
         Consola.limpiar();
         if(arreglo_gatos.isEmpty()) {
             System.out.println("|------------------------------|");
@@ -66,7 +69,22 @@ public class Menu_Aventura {
         return false;
     }
 
-    public void aventura_añadirGato() {
+    private boolean aventura_validarGatos2() {
+        Consola.limpiar();
+        if(arreglo_gatos.size() < 2) {
+            System.out.println("|------------------------------|");
+            System.out.println("|            Gatos!            |");
+            System.out.println("|------------------------------|");
+            System.out.println("| Algo horrible ha ocurrido!   |");
+            System.out.println("| No hay gatos :c              |");
+            System.out.println("|------------------------------|");
+            Consola.esperar();
+            return true;
+        }
+        return false;
+    }
+
+    private void aventura_añadirGato() {
         Consola.limpiar();
         Scanner MyScanner = new Scanner(System.in);
         // ! En este metodo exclusivamente se creeara un gato y añadira al arreglo_gatos.
@@ -83,7 +101,7 @@ public class Menu_Aventura {
         arreglo_gatos.add(gato);
     }
 
-    public char aventura_opciones() {
+    private char aventura_opciones() {
         Consola.limpiar();
         Scanner MyScanner = new Scanner(System.in);
         System.out.println("|------------------------------|");

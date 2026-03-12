@@ -26,7 +26,7 @@ public class Menu_Gatos {
         }
     }
 
-    public void menuGatos_switch(char opcion_usuario) {
+    private void menuGatos_switch(char opcion_usuario) {
         switch(opcion_usuario) {
             case '1' -> {
                 menuGatos_mostrarPerfil();
@@ -61,11 +61,11 @@ public class Menu_Gatos {
         }
     }
 
-    public void menuGatos_mostrarPerfil() {
+    private void menuGatos_mostrarPerfil() {
         gato.mostrarGato();
     }
 
-    public char menuGatos_opciones() {
+    private char menuGatos_opciones() {
         Consola.limpiar();
         Scanner MyScanner = new Scanner(System.in);
         // ! Metodo para mostrar todo sobre el gato actual.

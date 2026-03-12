@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db3796c2-53fe-4fd8-8ea8-7c6d39befbf2" name="Changes" comment="0.2 mewgatos - Inicio del Menu para la campaña y developer mode.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Extras/Campo_Entrenamiento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu_Aventura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu_Configuracion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu_Gatos.java" afterDir="false" />
+    <list default="true" id="db3796c2-53fe-4fd8-8ea8-7c6d39befbf2" name="Changes" comment="0.2c mewgatos - Pequeño bug arreglado mostrando gatos.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Entidades/Gato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Entidades/Gato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Herramientas/Consola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Herramientas/Consola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/CampoEntrenamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/CampoEntrenamiento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Extras/Campo_Entrenamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Extras/Campo_Entrenamiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/CampoEntrenamiento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu_Aventura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu_Aventura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu_Gatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu_Gatos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +161,9 @@
       <workItem from="1773267876853" duration="653000" />
       <workItem from="1773276397405" duration="898000" />
       <workItem from="1773277662523" duration="2090000" />
-      <workItem from="1773283153945" duration="1963000" />
+      <workItem from="1773283153945" duration="2484000" />
+      <workItem from="1773289210668" duration="339000" />
+      <workItem from="1773290355032" duration="1779000" />
     </task>
     <task id="LOCAL-00001" summary="0.0 mewgatos - init commit">
       <option name="closed" value="true" />
@@ -239,7 +237,23 @@
       <option name="project" value="LOCAL" />
       <updated>1773207535125</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="0.2a mewgatos - Demasiados cambios. (help)">
+      <option name="closed" value="true" />
+      <created>1773285645742</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1773285645742</updated>
+    </task>
+    <task id="LOCAL-00011" summary="0.2bfix mewgatos - Pequeño bug arreglado mostrando gatos.">
+      <option name="closed" value="true" />
+      <created>1773289540594</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1773289540594</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +282,9 @@
     <MESSAGE value="0.1d mewgatos - Cambio en el sistema de combates y Atributos en el Gato" />
     <MESSAGE value="0.1e mewgatos - Cambio a la hora de mostrar los gatos" />
     <MESSAGE value="0.2 mewgatos - Inicio del Menu para la campaña y developer mode." />
-    <option name="LAST_COMMIT_MESSAGE" value="0.2 mewgatos - Inicio del Menu para la campaña y developer mode." />
+    <MESSAGE value="0.2a mewgatos - Demasiados cambios. (help)" />
+    <MESSAGE value="0.2bfix mewgatos - Pequeño bug arreglado mostrando gatos." />
+    <option name="LAST_COMMIT_MESSAGE" value="0.2bfix mewgatos - Pequeño bug arreglado mostrando gatos." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

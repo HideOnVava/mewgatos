@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db3796c2-53fe-4fd8-8ea8-7c6d39befbf2" name="Changes" comment="0.1e mewgatos - Cambio a la hora de mostrar los gatos">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu.java" afterDir="false" />
+    <list default="true" id="db3796c2-53fe-4fd8-8ea8-7c6d39befbf2" name="Changes" comment="0.2 mewgatos - Inicio del Menu para la campaña y developer mode.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Extras/Campo_Entrenamiento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu_Aventura.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu_Configuracion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu_Gatos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Entidades/Gato.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Entidades/Gato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Herramientas/Consola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Herramientas/Consola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/CampoEntrenamiento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/CampoEntrenamiento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Menus/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,33 +64,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.Menu.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Haisv/Desktop/Folder/Proyectos - Github/Java/mewgatos",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "configurable.group.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Menu.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Haisv/Desktop/Folder/Proyectos - Github/Java/mewgatos&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Menu">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Clases_Menus.Main" />
@@ -151,6 +158,14 @@
       <workItem from="1771964967680" duration="947000" />
       <workItem from="1772035377354" duration="7000" />
       <workItem from="1773207101150" duration="222000" />
+      <workItem from="1773207343456" duration="196000" />
+      <workItem from="1773245372911" duration="2201000" />
+      <workItem from="1773260633553" duration="1645000" />
+      <workItem from="1773263174660" duration="2876000" />
+      <workItem from="1773267876853" duration="653000" />
+      <workItem from="1773276397405" duration="898000" />
+      <workItem from="1773277662523" duration="2090000" />
+      <workItem from="1773283153945" duration="1963000" />
     </task>
     <task id="LOCAL-00001" summary="0.0 mewgatos - init commit">
       <option name="closed" value="true" />
@@ -216,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771965673550</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="0.2 mewgatos - Inicio del Menu para la campaña y developer mode.">
+      <option name="closed" value="true" />
+      <created>1773207535125</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1773207535125</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +267,8 @@
     <MESSAGE value="0.1c mewgatos - Cambio en el sistema de combates y Atributos en el Gato" />
     <MESSAGE value="0.1d mewgatos - Cambio en el sistema de combates y Atributos en el Gato" />
     <MESSAGE value="0.1e mewgatos - Cambio a la hora de mostrar los gatos" />
-    <option name="LAST_COMMIT_MESSAGE" value="0.1e mewgatos - Cambio a la hora de mostrar los gatos" />
+    <MESSAGE value="0.2 mewgatos - Inicio del Menu para la campaña y developer mode." />
+    <option name="LAST_COMMIT_MESSAGE" value="0.2 mewgatos - Inicio del Menu para la campaña y developer mode." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

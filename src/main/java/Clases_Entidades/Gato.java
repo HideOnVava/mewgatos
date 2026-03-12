@@ -6,41 +6,56 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Gato {
-    //Atributos:
-    Random rnd = new Random();
-    Scanner MyScanner = new Scanner(System.in);
-    Gato gato_enemigo; // ! El gato enemigo en el combate
-    // ------------------------------ Estadisticas del Gato ------------------------------
-    private int fuerza; // ! Fuerza (Para calcular el daño del ataque)
-    private int hp_maximo; // ! Vida maxima (total) del gato
-    private int hp_actual; // ! Vida actual del gato
-    private int suerte; // ! Afecta al golpe critico. (1-5)
-    private int defensa; // ! Tanquea puntos de daño.
-
-    // ------------------------------ Atributos del Gato ------------------------------
+    //Atributos de la clase Gato:
+    private int fuerza;
+    private int inteligencia;
+    private int suerte;
+    //Estadisticas de la clase Gato:
+    private int nivel_actual;
+    private int xp_actual;
+    private int puntos_habilidad;
+    private int hp_base;
+    private int hp_maximo;
+    private int hp_actual;
+    private int defensa;
+    //Atributos de la clase Gato:
     private String nombre; // El nombre del gato
     private String apodo; // Un apodo "amigable" del gato
+    //Atributos en enfrentamiento:
+    private Gato gato_enemigo;
     private String rol;
-
     //------------------------------ Historial del Gato ------------------------------
-    private int combates; // Numero de combates total
+    private int combates; // ! Numero de combates total
     //Constructores:
-    public Gato(boolean random) {
-        newAtributos();
-        if(random){
-            newGatoR();
-        }else{
-
-        }
-        newConfirmacion();
+    public Gato(String nombre, String apodo) {
+        this.nombre = nombre;
+        this.apodo = apodo;
+        this.nivel_actual = 1;
+        this.xp_actual = 0;
+        this.puntos_habilidad = 5;
+        this.fuerza = 5;
+        this.inteligencia = 5;
+        this.suerte = 1;
+        this.defensa = 0;
+        this.hp_base = 20;
+        this.hp_maximo = calcularVidaMaxima();
+        this.hp_actual = hp_maximo;
     }
     //Getters y setters:
-    public String nombre(){return nombre;}
-    public String apodo(){return apodo;}
+    public int calcularVidaMaxima() {
+        int vida_maxima = hp_base + (fuerza * 2);
+        return vida_maxima;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public String getApodo() {
+        return apodo;
+    }
     public String rol(){return rol;}
     public int fuerza(){return fuerza;}
     public int hp_maximo(){return hp_maximo;}
-    public int hp_actual(){return hp_actual;}
+    public int getHp_actual(){return hp_actual;}
     public int suerte(){return suerte;}
     public int defensa(){return defensa;}
     public Gato enemigo(){return gato_enemigo;}
@@ -54,6 +69,7 @@ public class Gato {
     }
 
     public boolean obtenerCritico() {
+        Random rnd = new Random();
         int chance = rnd.nextInt(1,10);
         if(suerte >= chance){
             return true;
@@ -64,13 +80,11 @@ public class Gato {
     public int ataque(boolean critico) {
         int daño_base = (fuerza);
         int daño_critico = 0;
-        int chance = rnd.nextInt(1,10);
         if(critico){
             daño_critico = (daño_base);
         }
         int daño_total = (daño_base + daño_critico);
         return daño_total;
-        // !!! gato_enemigo.recibirDaño(daño_total);
     }
 
     public void recibirDaño(int daño) {
@@ -79,36 +93,19 @@ public class Gato {
         hp_actual = Math.max(hp_actual,0);
     }
 
-    private void newGatoR() {
-        //Metodo para obtener (random) las estadisticas del Gato
-        fuerza = rnd.nextInt(6,11);
-        hp_maximo = rnd.nextInt(20,35);
-        hp_actual = hp_maximo;
-        suerte = rnd.nextInt(2,5);
-        defensa = rnd.nextInt(1,3);
-    }
-
-    private void newAtributos() {
-        // Metodo para obtener los atributos basicos del Gato
+    public void mostrarGato() {
         Consola.limpiar();
         System.out.println("|------------------------------|");
-        System.out.println("|          Nuevo Gato!         |");
+        System.out.println("|            Perfil            |");
         System.out.println("|------------------------------|");
-        System.out.print  ("|Ingresa su nombre: ");
-        nombre = MyScanner.nextLine();
-        System.out.print("|Ingresa su apodo: ");
-        apodo = MyScanner.next();
-    }
-
-    private void newConfirmacion() {
+        System.out.println("|Nombre del gato: " + nombre);
+        System.out.println("|Apodo del gato: " + apodo);
+        System.out.println("|-----------Atributos----------|");
+        System.out.println("|Fuerza: " + fuerza + " | Inteligencia: " + inteligencia);
+        System.out.println("|Suerte: " + suerte + " | Defensa: " + defensa);
         System.out.println("|------------------------------|");
-        System.out.println("|           Atributos          |");
+        System.out.println("|Nivel: " + nivel_actual + " | Experiencia: " + xp_actual + "/100");
+        System.out.println("|Puntos de habilidad disponibles: " + puntos_habilidad);
         System.out.println("|------------------------------|");
-        System.out.println("|Fuerza: " + (fuerza));
-        System.out.println("|HP: " + (hp_maximo));
-        System.out.println("|Suerte: " + (suerte));
-        System.out.println("|Defensa: " + (defensa));
-        System.out.println("|------------------------------|");
-        Consola.esperar();
     }
 }

@@ -36,7 +36,7 @@ public class CampoEntrenamiento {
         System.out.println("|Gatos!");
         for(int i = 0; i < arreglo.size(); i++){
             Gato gato = arreglo.get(i);
-            System.out.println("|ID " + (i) + ". " + gato.apodo());
+            System.out.println("|ID " + (i) + ". " + gato.getApodo());
         }
         System.out.println("|------------------------------|");
         System.out.print("|Ingresa el (id) del heroe: ");
@@ -83,13 +83,13 @@ public class CampoEntrenamiento {
         boolean esCritico = gato.obtenerCritico();
         int daño = gato.ataque(esCritico);
         if(esCritico){
-            System.out.println("|El gato " + gato.apodo() + " ha realizado un ataque critico!");
+            System.out.println("|El gato " + gato.getApodo() + " ha realizado un ataque critico!");
         }else{
-            System.out.println("|El gato " + gato.apodo() + " ha realizado un ataque!");
+            System.out.println("|El gato " + gato.getApodo() + " ha realizado un ataque!");
         }
         System.out.println("|Ha infligido un total de: " + daño + " de daño!");
         gato.enemigo().recibirDaño(daño);
-        System.out.println("|El gato " + gato.enemigo().apodo() + " ha terminado con una vida de " + gato.enemigo().hp_actual() + "/" + gato.enemigo().hp_maximo());
+        System.out.println("|El gato " + gato.enemigo().getApodo() + " ha terminado con una vida de " + gato.enemigo().getHp_actual() + "/" + gato.enemigo().hp_maximo());
         System.out.println("|------------------------------|");
         Consola.esperar();
     }
@@ -107,7 +107,7 @@ public class CampoEntrenamiento {
         System.out.println("|------------------------------|");
         System.out.println("|           Ganador!           |");
         System.out.println("|------------------------------|");
-        System.out.println("[Increible!] El gato " + ganador.apodo() + " ha vencido!!!");
+        System.out.println("[Increible!] El gato " + ganador.getApodo() + " ha vencido!!!");
         System.out.println("|------------------------------|");
         Consola.esperar();
     }
